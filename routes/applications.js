@@ -26,4 +26,14 @@ appsRouter.delete('/:job_app_ID', async (req, res, next) => {
   });
 });
 
+// @route   PATCH /api/applications/:job_app_ID
+// @descr   This route updates a job application in the database.
+// @access  Private
+appsRouter.patch('/:job_app_ID', async (req, res, next) => {
+  const { job_app_ID } = req.params;
+  res.send({
+    msg: `This route updates job application with id of ${job_app_ID}.`,
+  });
+});
+
 module.exports = appsRouter;
